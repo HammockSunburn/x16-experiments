@@ -21,7 +21,7 @@ mkdir -p ~/git
 cd ~/git
 git clone https://github.com/commanderx16/x16-rom.git
 cd x16-rom
-git checkout tags/r37
+git checkout tags/r38
 make -j6
 mkdir ~/x16
 cp build/x16/rom.bin ~/x16
@@ -37,7 +37,7 @@ Next, we'll build the emulator and have it use the ROM we just built.
 cd ~/git
 git clone https://github.com/commanderx16/x16-emulator.git
 cd x16-emulator
-git checkout tags/r37
+git checkout tags/r38
 make -j6
 cp x16emu ~/x16
 ```
@@ -84,7 +84,7 @@ cd c
 cl65 -O -t cx16 -o HELLO hello.c text.s
 ```
 
-You should now be able to run `~/git/x16-emulator/x16emu` and load the program we just built from within the emulator:
+You should now be able to run `~/x16/x16emu` and load the program we just built from within the emulator:
 
 ```basic
 LOAD "HELLO",8
@@ -102,7 +102,7 @@ cd asm
 ~/x16/acme --cpu w65c02 -f cbm -o HELLO hello.asm
 ```
 
-You should then be able to run `~/git/x16-emulator/x16emu` and load the program we just built from within the emulator:
+You should then be able to run `~/x16/x16emu` and load the program we just built from within the emulator:
 
 ```basic
 LOAD "HELLO",8
